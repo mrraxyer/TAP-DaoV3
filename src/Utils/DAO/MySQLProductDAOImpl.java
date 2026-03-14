@@ -1,7 +1,8 @@
-package Utils.dao;
+package Utils.DAO;
 
 import Models.Product;
 import Utils.connection.DatabaseConnection;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

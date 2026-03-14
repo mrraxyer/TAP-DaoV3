@@ -1,14 +1,13 @@
 import Controllers.ProductController;
-import Views.VistaConsola;
+import Utils.DAO.MySQLProductDAOImpl;
+import Utils.DAO.PostgresProductDAOImpl;
+import Utils.DAO.ProductDAO;
 import Utils.connection.DatabaseConnection;
 import Utils.connection.LocalPostgresConnection;
 import Utils.connection.SupabaseConnection;
-import Utils.dao.MySQLProductDAOImpl;
-import Utils.dao.PostgresProductDAOImpl;
-import Utils.dao.ProductDAO;
+import Views.VistaConsola;
 
 import java.sql.SQLException;
-
 
 public class Main {
 
@@ -44,7 +43,7 @@ public class Main {
 
         // Nombre y número de control
         vista.mostrarTitulo("Supabase - Alumno");
-        supabaseController.crearProducto("Rafael Abonce Garcia", 2026.00, "c23030448");
+        supabaseController.crearProducto("Rafael Abonce Garcia", 1050.50, "c23030448");
 
         // Listar para confirmar que se insertó
         vista.mostrarTitulo("Supabase - Lista Final de Productos");
@@ -70,7 +69,6 @@ public class Main {
     }
 
     private static void demostrarCRUD(ProductController controller, VistaConsola vista, String dbName) {
-
         // CREATE
         vista.mostrarTitulo(dbName + " - CREATE");
         controller.crearProducto("Pixel 8 Pro Max", 20050.00, "telefonos");

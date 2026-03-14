@@ -1,8 +1,8 @@
 package Controllers;
 
 import Models.Product;
+import Utils.DAO.ProductDAO;
 import Views.VistaConsola;
-import Utils.dao.ProductDAO;
 
 import java.util.List;
 import java.util.Optional;

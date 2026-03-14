@@ -1,6 +1,7 @@
-package Utils.dao;
+package Utils.DAO;
 
 import Models.Product;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -10,9 +11,13 @@ import java.util.Optional;
  */
 public interface ProductDAO {
     void create(Product product);
+
     Optional<Product> findById(int id);
+
     List<Product> findAll();
+
     void update(Product product);
+
     void delete(int id);
 }
 
